@@ -1,9 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap");
 
-a,
-button {
+a {
   text-decoration: none;
   color: inherit;
+  outline: none;
+  font-family: inherit;
+}
+
+.button {
+  width: fit-content;
+  height: 50px;
+  background: #99862a;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
   outline: none;
   font-family: inherit;
 }
@@ -82,21 +100,6 @@ body {
         margin-top: 583px;
         display: flex;
         justify-content: space-between;
-        .header-content__button {
-          width: fit-content;
-          height: 50px;
-          background: #99862a;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 25px;
-          text-align: center;
-          letter-spacing: 0.05em;
-          text-transform: uppercase;
-          padding: 15px 30px;
-          outline: none;
-          border: none;
-          cursor: pointer;
-        }
       }
     }
   }
@@ -105,7 +108,6 @@ body {
     width: inherit;
     height: fit-content;
     .main-slogan__block {
-      height: 856px;
       background: #282828;
       display: flex;
       justify-content: center;
@@ -113,7 +115,7 @@ body {
       .main-slogan__content {
         border: 3px solid #c4c4c4;
         box-sizing: border-box;
-        margin: auto 405px;
+        margin: 97px 405px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -145,6 +147,126 @@ body {
         }
         .main-slogan__image {
           margin-bottom: 60px;
+        }
+      }
+    }
+    .main-news__block {
+      background: #e6e3c4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .main-news__content {
+        width: 1110px;
+        margin: 80px auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        border-top: 1px solid #998431;
+        border-bottom: 1px solid #998431;
+        justify-items: stretch;
+        div[class$="block"] {
+          margin: 60px 0;
+          height: 758px;
+        }
+        .main-news__left-block {
+          display: grid;
+          align-items: stretch;
+
+          .main-news__new-collection {
+            margin: 0;
+            font-size: 16px;
+            line-height: 150%;
+          }
+          .main-news__title {
+            position: relative;
+            margin: 2px 0 30px;
+            width: 298px;
+            font-family: "Playfair Display";
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 150%;
+            color: #282828;
+            &::after {
+              position: absolute;
+              content: "";
+              display: block;
+              text-align: center;
+              top: 138px;
+              left: 0;
+              width: 160px;
+              height: 1px;
+              background: #282828;
+            }
+          }
+          .main-news__description {
+            font-size: 14px;
+            line-height: 150%;
+            color: #282828;
+            margin: 0;
+            width: 445px;
+            height: 84px;
+          }
+          .main-news__table {
+            display: grid;
+            grid-template-columns: 445px;
+            grid-template-rows: repeat(3, 76px);
+            width: fit-content;
+            height: fit-content;
+            .main-news__table-items {
+              display: grid;
+              grid-template-columns: 76px 369px;
+              justify-items: center;
+              align-items: center;
+              &:nth-child(2) {
+                border: 1px solid #282828;
+                border-right: none;
+                border-left: none;
+              }
+
+              .main-news__table-year {
+                margin: 0;
+                padding: 27px 24px;
+                border-right: 1px solid #282828;
+                font-size: 14px;
+                line-height: 150%;
+                color: #282828;
+              }
+              .main-news__item {
+                display: flex;
+                flex-direction: column;
+
+                .main-news__item-name {
+                  margin: 0 0 5px 0;
+                  font-family: "Playfair Display";
+                  font-weight: bold;
+                  font-size: 18px;
+                  line-height: 150%;
+                  color: #282828;
+                }
+                .main-news__item-description {
+                  margin: 0;
+                  font-size: 14px;
+                  line-height: 150%;
+                  color: #282828;
+                }
+              }
+            }
+          }
+        }
+        .main-news__right-block {
+          display: grid;
+          grid-template-columns: auto;
+          grid-template-rows: fit-content fit-content;
+          row-gap: 30px;
+          // align-items: center;
+          .main-news__big-image {
+            width: 540px;
+            height: 500px;
+          }
+          .main-news__image-block {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            column-gap: 30px;
+          }
         }
       }
     }
