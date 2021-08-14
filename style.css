@@ -606,7 +606,19 @@ body .footer .footer-content .footer-content__bottom-menu .footer-content__botto
 body .footer .footer-content .footer-content__bottom-menu .footer-content__bottom-link:last-child {
   margin-right: 94px;
   padding-right: 0;
+  border-left: 1px solid #ffffff;
   border-right: none;
+}
+
+body .footer .footer-content .footer-content__bottom-menu .footer-content__logo-link {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (65px)[3];
+      grid-template-columns: repeat(3, 65px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
 }
 
 @media screen and (max-width: 500px) {
